@@ -80,7 +80,7 @@ layers:
   - RGB OFF
   - RGB ON
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB COLOR HSB(0,0,100)
   - RGB EFF
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - RGB EFR
