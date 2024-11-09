@@ -45,11 +45,11 @@ layers:
   - LGUI
   - {t: '$$mdi:keyboard-space$$', h: arrow}
   - $$mdi:arrow-right-bold$$
-  - {t: '$$mdi:keyboard-space$$', h: num+sym}
+  - {t: '$$mdi:keyboard-space$$', h: num_sym}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  num+sym:
+  num_sym:
   - F1
   - F2
   - F3
