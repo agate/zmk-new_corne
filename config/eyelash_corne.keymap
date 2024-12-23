@@ -73,10 +73,10 @@
 
         NumSym {
             bindings = <
-&kp F1     &kp F2                                &kp F3                            &kp F4                         &kp F5                         &kp F6                    &trans          &kp F7  &kp F8                         &kp F9                               &kp F10                            &kp F11                                &kp F12
-&kp GRAVE  &home_row_mods LEFT_COMMAND NUMBER_1  &home_row_mods LEFT_ALT NUMBER_2  &home_row_mods LSHFT NUMBER_3  &home_row_mods LCTRL NUMBER_4  &kp N5            &trans  &trans  &trans  &kp N6  &home_row_mods RCTRL NUMBER_7  &home_row_mods RIGHT_SHIFT NUMBER_8  &home_row_mods RIGHT_ALT NUMBER_9  &home_row_mods RIGHT_COMMAND NUMBER_0  &kp MINUS
-&trans     &trans                                &kp LEFT_BRACE                    &kp LEFT_BRACKET               &kp LEFT_PARENTHESIS           &trans  &trans            &trans          &trans  &kp RIGHT_PARENTHESIS          &kp RIGHT_BRACKET                    &kp RIGHT_BRACE                    &kp EQUAL                              &trans
-                                                                                   &trans                         &trans                         &trans                                    &trans  &trans                         &trans
+&kp F1     &kp F2                                &kp F3                            &kp F4                         &kp F5                         &kp F6                   &trans          &kp F7  &kp F8                         &kp F9                               &kp F10                            &kp F11                                &kp F12
+&kp GRAVE  &home_row_mods LEFT_COMMAND NUMBER_1  &home_row_mods LEFT_ALT NUMBER_2  &home_row_mods LSHFT NUMBER_3  &home_row_mods LCTRL NUMBER_4  &kp N5           &trans  &trans  &trans  &kp N6  &home_row_mods RCTRL NUMBER_7  &home_row_mods RIGHT_SHIFT NUMBER_8  &home_row_mods RIGHT_ALT NUMBER_9  &home_row_mods RIGHT_COMMAND NUMBER_0  &kp MINUS
+&none      &none                                 &kp LEFT_BRACE                    &kp LEFT_BRACKET               &kp LEFT_PARENTHESIS           &none   &none            &trans          &none   &kp RIGHT_PARENTHESIS          &kp RIGHT_BRACKET                    &kp RIGHT_BRACE                    &kp EQUAL                              &none
+                                                                                   &trans                         &trans                         &trans                                   &trans  &trans                         &trans
             >;
 
             label = "NumSym";
