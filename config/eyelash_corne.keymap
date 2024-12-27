@@ -105,6 +105,7 @@
             >;
 
             label = "Ext";
+            sensor-bindings = <&rgb_encoder>;
         };
     };
 };
