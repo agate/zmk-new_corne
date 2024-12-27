@@ -75,10 +75,10 @@
 
         NumSym {
             bindings = <
-&kp F1     &kp F2                                &kp F3                            &kp F4                         &kp F5                         &kp F6                      &trans          &kp F7     &kp F8                         &kp F9                               &kp F10                            &kp F11                                &kp F12
-&kp GRAVE  &home_row_mods LEFT_COMMAND NUMBER_1  &home_row_mods LEFT_ALT NUMBER_2  &home_row_mods LSHFT NUMBER_3  &home_row_mods LCTRL NUMBER_4  &kp N5              &trans  &trans  &trans  &kp N6     &home_row_mods RCTRL NUMBER_7  &home_row_mods RIGHT_SHIFT NUMBER_8  &home_row_mods RIGHT_ALT NUMBER_9  &home_row_mods RIGHT_COMMAND NUMBER_0  &none
-&none      &none                                 &kp LEFT_BRACE                    &kp LEFT_BRACKET               &kp LEFT_PARENTHESIS           &kp MINUS  &none            &trans          &kp EQUAL  &kp RIGHT_PARENTHESIS          &kp RIGHT_BRACKET                    &kp RIGHT_BRACE                    &none                                  &none
-                                                                                   &trans                         &trans                         &trans                                      &trans     &trans                         &trans
+&kp F1     &kp F2                                &kp F3                            &kp F4                         &kp F5                                &kp F6                      &trans          &kp F7     &kp F8                                 &kp F9                               &kp F10                            &kp F11                                &kp F12
+&kp GRAVE  &home_row_mods LEFT_COMMAND NUMBER_1  &home_row_mods LEFT_ALT NUMBER_2  &home_row_mods LSHFT NUMBER_3  &home_row_mods LEFT_CONTROL NUMBER_4  &kp N5              &trans  &trans  &trans  &kp N6     &home_row_mods RIGHT_CONTROL NUMBER_7  &home_row_mods RIGHT_SHIFT NUMBER_8  &home_row_mods RIGHT_ALT NUMBER_9  &home_row_mods RIGHT_COMMAND NUMBER_0  &none
+&none      &none                                 &kp LEFT_BRACE                    &kp LEFT_BRACKET               &kp LEFT_PARENTHESIS                  &kp MINUS  &none            &trans          &kp EQUAL  &kp RIGHT_PARENTHESIS                  &kp RIGHT_BRACKET                    &kp RIGHT_BRACE                    &none                                  &none
+                                                                                   &trans                         &trans                                &mo 3                                       &trans     &trans                                 &trans
             >;
 
             label = "NumSym";
@@ -87,14 +87,25 @@
 
         Nav {
             bindings = <
-&bt BT_CLR_ALL  &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4                                      &mmv MOVE_UP                     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none  &bl BL_TOG
-&none           &kp LEFT_COMMAND  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL     &none                             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &none  &bl BL_CYCLE
-&none           &none             &none         &none           &none         &none         &kp C_PLAY_PAUSE                    &mmv MOVE_DOWN                   &kp HOME        &kp PG_DN       &kp PG_UP     &kp END          &none  &none
-                                                &trans          &trans        &trans                                                                             &trans          &trans          &trans
+&none  &none             &none         &none           &none             &none                                       &mmv MOVE_UP                     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none  &none
+&none  &kp LEFT_COMMAND  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &none                       &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &none  &none
+&none  &none             &none         &none           &none             &none   &kp C_PLAY_PAUSE                    &mmv MOVE_DOWN                   &kp HOME        &kp PG_DN       &kp PG_UP     &kp END          &none  &none
+                                       &trans          &trans            &trans                                                                       &mo 3           &trans          &trans
             >;
 
             label = "Nav";
             sensor-bindings = <&inc_dec_kp C_NEXT C_PREVIOUS>;
+        };
+
+        Ext {
+            bindings = <
+&bt BT_CLR_ALL  &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3      &bt BT_SEL 4                  &none         &bl BL_TOG  &bl BL_CYCLE       &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &none              &none
+&none           &kp LEFT_COMMAND  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &none                  &none  &none  &none  &none       &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &kp RIGHT_ALT    &kp RIGHT_COMMAND  &none
+&none           &none             &none         &none           &none             &none         &none           &none         &none       &none              &none            &none            &none              &none
+                                                &none           &none             &none                                       &none       &none              &none
+            >;
+
+            label = "Ext";
         };
     };
 };
