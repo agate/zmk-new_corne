@@ -78,7 +78,7 @@ layers:
   - '0'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - <
   - '{'
   - {t: '[', s: '{'}
   - (
@@ -89,7 +89,7 @@ layers:
   - )
   - {t: ']', s: '}'}
   - '}'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '>'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
