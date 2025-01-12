@@ -39,8 +39,9 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            flavor = "tap-preferred";
+            flavor = "tap-unless-interrupted";
             quick-tap-ms = <200>;
+            require-prior-idle-ms = <150>;
         };
 
         hold_tap: hold_tap {
@@ -61,28 +62,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
-        };
-
-        home_row_mods_left: home_row_mods_left {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOME_ROW_MODS_LEFT";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <230>;
-            flavor = "tap-unless-interrupted";
-            hold-trigger-key-positions = <7 22 36 37 23 8 9 24 38 39 25 10 45 46 47 40 26 11 12 27 41 21 20 6 19 35>;
-        };
-
-        home_row_mods_right: home_row_mods_right {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOME_ROW_MODS_RIGHT";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <230>;
-            flavor = "tap-unless-interrupted";
-            hold-trigger-key-positions = <5 34 44 43 32 33 42 17 4 18 3 16 31 29 15 30 14 1 2 0 13 28>;
         };
     };
 
@@ -106,10 +85,10 @@
         QWERTY {
             display-name = "QWERTY";
             bindings = <
-&kp TAB  &kp Q  &kp W                               &kp E                           &kp R                               &kp T                                       &kp UP                &kp Y  &kp U                                 &kp I                             &kp O                                 &kp P          &kp BACKSLASH
-&none    &kp A  &home_row_mods_left LEFT_CONTROL S  &home_row_mods_left LEFT_ALT D  &home_row_mods_left LEFT_COMMAND F  &kp G                             &kp LEFT  &kp ENTER  &kp RIGHT  &kp H  &home_row_mods_right RIGHT_COMMAND J  &home_row_mods_right RIGHT_ALT K  &home_row_mods_right RIGHT_CONTROL L  &kp SEMICOLON  &kp SQT
-&none    &kp Z  &kp X                               &kp C                           &kp V                               &kp B               &kp K_MUTE              &kp DOWN              &kp N  &kp M                                 &kp COMMA                         &kp DOT                               &kp FSLH       &none
-                                                    &kp BACKSPACE                   &hold_tap LEFT_SHIFT ESCAPE         &tap_layer 2 ENTER                                                &mo 1  &kp SPACE                             &none
+&kp TAB  &kp Q  &kp W                          &kp E                      &kp R                          &kp T                                       &kp UP                &kp Y  &kp U                           &kp I                       &kp O                           &kp P          &kp BACKSLASH
+&none    &kp A  &home_row_mods LEFT_CONTROL S  &home_row_mods LEFT_ALT D  &home_row_mods LEFT_COMMAND F  &kp G                             &kp LEFT  &kp ENTER  &kp RIGHT  &kp H  &home_row_mods RIGHT_COMMAND J  &home_row_mods RIGHT_ALT K  &home_row_mods RIGHT_CONTROL L  &kp SEMICOLON  &kp SQT
+&none    &kp Z  &kp X                          &kp C                      &kp V                          &kp B               &kp K_MUTE              &kp DOWN              &kp N  &kp M                           &kp COMMA                   &kp DOT                         &kp FSLH       &none
+                                               &kp BACKSPACE              &hold_tap LEFT_SHIFT ESCAPE    &tap_layer 2 ENTER                                                &mo 1  &kp SPACE                       &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -117,10 +96,10 @@
 
         NumSym {
             bindings = <
-&kp F1     &kp F2         &kp F3                                     &kp F4                                 &kp F5                                     &kp F6                      &trans          &kp F7     &kp F8                                       &kp F9                                   &kp F10                                      &kp F11           &kp F12
-&kp GRAVE  &kp NUMBER_1   &home_row_mods_left LEFT_CONTROL NUMBER_2  &home_row_mods_left LEFT_ALT NUMBER_3  &home_row_mods_left LEFT_COMMAND NUMBER_4  &kp N5              &trans  &trans  &trans  &kp N6     &home_row_mods_right RIGHT_COMMAND NUMBER_7  &home_row_mods_right RIGHT_ALT NUMBER_8  &home_row_mods_right RIGHT_CONTROL NUMBER_9  &kp NUMBER_0      &none
-&none      &kp LESS_THAN  &kp LEFT_BRACE                             &kp LEFT_BRACKET                       &kp LEFT_PARENTHESIS                       &kp MINUS  &none            &trans          &kp EQUAL  &kp RIGHT_PARENTHESIS                        &kp RIGHT_BRACKET                        &kp RIGHT_BRACE                              &kp GREATER_THAN  &none
-                                                                     &trans                                 &trans                                     &mo 3                                       &trans     &trans                                       &trans
+&kp F1     &kp F2         &kp F3                                &kp F4                            &kp F5                                &kp F6                      &trans          &kp F7     &kp F8                                 &kp F9                             &kp F10                                &kp F11           &kp F12
+&kp GRAVE  &kp NUMBER_1   &home_row_mods LEFT_CONTROL NUMBER_2  &home_row_mods LEFT_ALT NUMBER_3  &home_row_mods LEFT_COMMAND NUMBER_4  &kp N5              &trans  &trans  &trans  &kp N6     &home_row_mods RIGHT_COMMAND NUMBER_7  &home_row_mods RIGHT_ALT NUMBER_8  &home_row_mods RIGHT_CONTROL NUMBER_9  &kp NUMBER_0      &none
+&none      &kp LESS_THAN  &kp LEFT_BRACE                        &kp LEFT_BRACKET                  &kp LEFT_PARENTHESIS                  &kp MINUS  &none            &trans          &kp EQUAL  &kp RIGHT_PARENTHESIS                  &kp RIGHT_BRACKET                  &kp RIGHT_BRACE                        &kp GREATER_THAN  &none
+                                                                &trans                            &trans                                &mo 3                                       &trans     &trans                                 &trans
             >;
 
             label = "NumSym";
