@@ -32,9 +32,9 @@
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
 
-        home_row_mods: home_row_mods {
+        home_row_hold_tap: home_row_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOME_ROW_MODS";
+            label = "HOME_ROW_HOLD_TAP";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -54,9 +54,9 @@
             quick-tap-ms = <200>;
         };
 
-        tap_layer: tap_layer {
+        layer_tap: layer_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "TAP_LAYER";
+            label = "LAYER_TAP";
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
@@ -64,30 +64,16 @@
             quick-tap-ms = <200>;
         };
 
-        home_row_mods_left: home_row_mods_left {
+        home_row_layer_tap: home_row_layer_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOME_ROW_MODS_LEFT";
-            bindings = <&kp>, <&kp>;
+            label = "HOME_ROW_LAYER_TAP";
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            flavor = "tap-unless-interrupted";
+            flavor = "tap-preferred";
             quick-tap-ms = <200>;
             require-prior-idle-ms = <150>;
-            hold-trigger-key-positions = <7 8 9 10 11 12 27 41 40 26 25 24 23 22 36 37 38 39 47 46 45 44 43 42 20 6 21 35 19 34>;
-        };
-
-        home_row_mods_right: home_row_mods_right {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOME_ROW_MODS_RIGHT";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-unless-interrupted";
-            quick-tap-ms = <200>;
-            require-prior-idle-ms = <150>;
-            hold-trigger-key-positions = <47 46 45 44 43 42 20 6 21 35 19 33 18 5 4 17 32 31 16 3 2 30 29 28 13 0 1 14 15 34>;
         };
     };
 
@@ -111,10 +97,10 @@
         QWERTY {
             display-name = "QWERTY";
             bindings = <
-&kp TAB  &kp Q  &kp W                          &kp E                      &kp R                          &kp T                                       &kp UP                &kp Y  &kp U                           &kp I                       &kp O                           &kp P          &kp BACKSLASH
-&none    &kp A  &home_row_mods LEFT_CONTROL S  &home_row_mods LEFT_ALT D  &home_row_mods LEFT_COMMAND F  &kp G                             &kp LEFT  &kp ENTER  &kp RIGHT  &kp H  &home_row_mods RIGHT_COMMAND J  &home_row_mods RIGHT_ALT K  &home_row_mods RIGHT_CONTROL L  &kp SEMICOLON  &kp SQT
-&none    &kp Z  &kp X                          &kp C                      &kp V                          &kp B               &kp K_MUTE              &kp DOWN              &kp N  &kp M                           &kp COMMA                   &kp DOT                         &kp FSLH       &none
-                                               &kp BACKSPACE              &hold_tap LEFT_SHIFT ESCAPE    &tap_layer 2 ENTER                                                &mo 1  &kp SPACE                       &none
+&kp TAB  &kp Q  &kp W                          &kp E                          &kp R                              &kp T                                       &kp UP                &kp Y  &kp U                               &kp I                               &kp O                           &kp P          &kp BACKSLASH
+&none    &kp A  &home_row_hold_tap LEFT_ALT S  &home_row_hold_tap LEFT_GUI D  &home_row_hold_tap LEFT_CONTROL F  &kp G                             &kp LEFT  &kp ENTER  &kp RIGHT  &kp H  &home_row_hold_tap RIGHT_CONTROL J  &home_row_hold_tap RIGHT_COMMAND K  &home_row_hold_tap RIGHT_ALT L  &kp SEMICOLON  &kp SQT
+&none    &kp Z  &kp X                          &kp C                          &kp V                              &kp B               &kp K_MUTE              &kp DOWN              &kp N  &kp M                               &kp COMMA                           &kp DOT                         &kp FSLH       &none
+                                               &kp BACKSPACE                  &hold_tap LEFT_SHIFT ESCAPE        &layer_tap 2 ENTER                                                &mo 1  &kp SPACE                           &kp ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -122,10 +108,10 @@
 
         NumSym {
             bindings = <
-&kp F1     &kp F2         &kp F3                                &kp F4                            &kp F5                                &kp F6                      &trans          &kp F7     &kp F8                                 &kp F9                             &kp F10                                &kp F11           &kp F12
-&kp GRAVE  &kp NUMBER_1   &home_row_mods LEFT_CONTROL NUMBER_2  &home_row_mods LEFT_ALT NUMBER_3  &home_row_mods LEFT_COMMAND NUMBER_4  &kp N5              &trans  &trans  &trans  &kp N6     &home_row_mods RIGHT_COMMAND NUMBER_7  &home_row_mods RIGHT_ALT NUMBER_8  &home_row_mods RIGHT_CONTROL NUMBER_9  &kp NUMBER_0      &none
-&none      &kp LESS_THAN  &kp LEFT_BRACE                        &kp LEFT_BRACKET                  &kp LEFT_PARENTHESIS                  &kp MINUS  &none            &trans          &kp EQUAL  &kp RIGHT_PARENTHESIS                  &kp RIGHT_BRACKET                  &kp RIGHT_BRACE                        &kp GREATER_THAN  &none
-                                                                &trans                            &trans                                &mo 3                                       &trans     &trans                                 &trans
+&kp F1     &kp F2         &kp F3                                &kp F4                                    &kp F5                                    &kp F6                      &trans          &kp F7     &kp F8                                     &kp F9                                     &kp F10                                &kp F11           &kp F12
+&kp GRAVE  &kp NUMBER_1   &home_row_hold_tap LEFT_ALT NUMBER_2  &home_row_hold_tap LEFT_COMMAND NUMBER_3  &home_row_hold_tap LEFT_CONTROL NUMBER_4  &kp N5              &trans  &trans  &trans  &kp N6     &home_row_hold_tap RIGHT_CONTROL NUMBER_7  &home_row_hold_tap RIGHT_COMMAND NUMBER_8  &home_row_hold_tap RIGHT_ALT NUMBER_9  &kp NUMBER_0      &none
+&none      &kp LESS_THAN  &kp LEFT_BRACE                        &kp LEFT_BRACKET                          &kp LEFT_PARENTHESIS                      &kp MINUS  &none            &trans          &kp EQUAL  &kp RIGHT_PARENTHESIS                      &kp RIGHT_BRACKET                          &kp RIGHT_BRACE                        &kp GREATER_THAN  &none
+                                                                &trans                                    &trans                                    &mo 3                                       &trans     &trans                                     &trans
             >;
 
             label = "NumSym";
@@ -134,10 +120,10 @@
 
         Nav {
             bindings = <
-&none  &none  &none      &none     &none     &none                                       &mmv MOVE_UP                     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none  &none
-&none  &none  &kp LCTRL  &kp LALT  &kp LGUI  &none                       &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &none  &none
-&none  &none  &kp LCTRL  &kp LALT  &kp LGUI  &none   &kp C_PLAY_PAUSE                    &mmv MOVE_DOWN                   &kp HOME        &kp PG_DN       &kp PG_UP     &kp END          &none  &none
-                         &trans    &trans    &trans                                                                       &mo 3           &trans          &trans
+&none  &none  &none     &none     &none      &none                                       &mmv MOVE_UP                     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none  &none
+&none  &none  &kp LALT  &kp LGUI  &kp LCTRL  &none                       &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &none  &none
+&none  &none  &kp RALT  &kp RGUI  &kp RCTRL  &none   &kp C_PLAY_PAUSE                    &mmv MOVE_DOWN                   &kp HOME        &kp PG_DN       &kp PG_UP     &kp END          &none  &none
+                        &trans    &trans     &trans                                                                       &mo 3           &trans          &trans
             >;
 
             label = "Nav";
