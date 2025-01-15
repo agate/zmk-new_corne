@@ -121,8 +121,8 @@
         Nav {
             bindings = <
 &none  &kp LG(KP_NUMBER_1)  &kp LG(KP_NUMBER_2)  &kp LG(KP_NUMBER_3)  &kp LG(KP_NUMBER_4)  &kp LG(KP_NUMBER_5)                                      &mmv MOVE_UP                     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none  &none
-&none  &none                &kp LALT             &kp LGUI             &kp LCTRL            &none                                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &none  &none
-&none  &none                &kp RALT             &kp RGUI             &kp RCTRL            &none                &kp C_PLAY_PAUSE                    &mmv MOVE_DOWN                   &kp HOME        &kp PG_DN       &kp PG_UP     &kp END          &none  &none
+&none  &kp LG(TAB)          &kp LALT             &kp LGUI             &kp LCTRL            &none                                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &none  &none
+&none  &kp LG(GRAVE)        &kp RALT             &kp RGUI             &kp RCTRL            &none                &kp C_PLAY_PAUSE                    &mmv MOVE_DOWN                   &kp HOME        &kp PG_DN       &kp PG_UP     &kp END          &none  &none
                                                  &trans               &trans               &trans                                                                                    &mo 3           &trans          &trans
             >;
 
