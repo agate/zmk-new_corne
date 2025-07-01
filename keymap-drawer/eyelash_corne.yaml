@@ -50,19 +50,19 @@ layers:
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   NumSym:
-  - F11
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
+  - Sft+~
+  - Sft+!
+  - Sft+@
+  - Sft+#
+  - Sft+$
+  - Sft+%
   - {t: '$$mdi:transfer$$', type: trans}
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - F12
+  - Sft+^
+  - Sft+&
+  - Sft+*
+  - Sft+(
+  - Sft+)
+  - Sft+_
   - {t: '`', s: '~'}
   - '1'
   - {t: '2', h: '$$mdi:apple-keyboard-option$$'}
@@ -77,16 +77,16 @@ layers:
   - {t: '8', h: '$$mdi:apple-keyboard-command$$'}
   - {t: '9', h: '$$mdi:apple-keyboard-option$$'}
   - '0'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '-', s: _}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - <
   - '{'
   - {t: '[', s: '{'}
   - (
-  - {t: '-', s: _}
+  - {t: '=', s: +}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '=', s: +}
+  - +
   - )
   - {t: ']', s: '}'}
   - '}'
