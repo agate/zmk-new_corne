@@ -245,3 +245,10 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+combos:
+- p: [8, 9]
+  k: {t: '$$mdi:backspace$$', type: backspace}
+- p: [9, 10]
+  k: $$mdi:backspace-reverse-outline$$
+- p: [2, 3]
+  k: $$mdi:keyboard-esc$$
