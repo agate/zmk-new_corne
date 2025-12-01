@@ -48,7 +48,7 @@ layers:
   - {t: '$$mdi:keyboard-return$$', h: NumSym}
   - {t: '$$mdi:keyboard-return$$', h: Nav}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:backspace$$', type: backspace}
   NumSym:
   - Sft+~
   - Sft+!
@@ -196,3 +196,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+combos:
+- p: [42, 28]
+  k: $$mdi:backspace-reverse-outline$$
+- p: [47, 41]
+  k: $$mdi:backspace-reverse-outline$$
