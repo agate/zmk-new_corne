@@ -43,7 +43,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             quick-tap-ms = <200>;
             require-prior-idle-ms = <100>;
             hold-trigger-on-release;
@@ -80,7 +80,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             quick-tap-ms = <200>;
             require-prior-idle-ms = <100>;
             hold-trigger-on-release;
@@ -94,7 +94,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             quick-tap-ms = <200>;
             require-prior-idle-ms = <100>;
             hold-trigger-on-release;
@@ -165,10 +165,10 @@
 
         Ext {
             bindings = <
-&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1                         &bt BT_SEL 2                             &bt BT_SEL 3                             &bt BT_SEL 4                  &none         &rgb_ug RGB_TOG  &rgb_ug RGB_EFF                            &none                                      &none                                  &none    &none
-&kp F11         &kp F1        &home_row_hold_tap_left LEFT_ALT F2  &home_row_hold_tap_left LEFT_COMMAND F3  &home_row_hold_tap_left LEFT_CONTROL F4  &kp F5                 &none  &none  &none  &kp F6           &home_row_hold_tap_right RIGHT_CONTROL F7  &home_row_hold_tap_right RIGHT_COMMAND F8  &home_row_hold_tap_right RIGHT_ALT F9  &kp F10  &kp F12
-&trans          &none         &none                                &none                                    &none                                    &none         &none           &none         &none            &none                                      &none                                      &none                                  &none    &trans
-                                                                   &kp DELETE                               &none                                    &none                                       &none            &none                                      &kp DELETE
+&none    &bt BT_SEL 0  &bt BT_SEL 1                         &bt BT_SEL 2                             &bt BT_SEL 3                             &bt BT_SEL 4                       &none         &rgb_ug RGB_TOG  &rgb_ug RGB_EFF                            &none                                      &none                                  &none    &none
+&kp F11  &kp F1        &home_row_hold_tap_left LEFT_ALT F2  &home_row_hold_tap_left LEFT_COMMAND F3  &home_row_hold_tap_left LEFT_CONTROL F4  &kp F5                      &none  &none  &none  &kp F6           &home_row_hold_tap_right RIGHT_CONTROL F7  &home_row_hold_tap_right RIGHT_COMMAND F8  &home_row_hold_tap_right RIGHT_ALT F9  &kp F10  &kp F12
+&trans   &none         &none                                &none                                    &none                                    &none         &bt BT_CLR           &none         &none            &none                                      &none                                      &none                                  &none    &trans
+                                                            &kp DELETE                               &none                                    &none                                            &none            &none                                      &kp DELETE
             >;
 
             label = "Ext";
