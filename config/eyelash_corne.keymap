@@ -87,21 +87,8 @@
 
         rgb-hold-tap:
 
-        rgb-hold-tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RGB-HOLD-TAP";
-            bindings = <&rgb_ug>, <&rgb_ug>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <125>;
-        };
 
         rgb-hold-tap:
-
-        rgb-hold-tap { compatible = "zmk,behavior-hold-tap"; };
     };
 
     rgb_encoder: rgb_encoder {
@@ -168,10 +155,10 @@
 
         Ext {
             bindings = <
-&none    &bt BT_SEL 0  &bt BT_SEL 1                         &bt BT_SEL 2                             &bt BT_SEL 3                             &bt BT_SEL 4                       &none                   &rgb-hold-tap RGB_EFR RGB_EFF  &rgb-hold-tap RGB_SPD RGB_SPI              &rgb-hold-tap RGB_HUD RGB_HUI              &rgb-hold-tap RGB_SAD RGB_SAI          &rgb-hold-tap RGB_BRD RGB_BRI  &rgb_ug RGB_COLOR_HSB(0,0,100)
-&kp F11  &kp F1        &home_row_hold_tap_left LEFT_ALT F2  &home_row_hold_tap_left LEFT_COMMAND F3  &home_row_hold_tap_left LEFT_CONTROL F4  &kp F5                      &none  &rgb_ug RGB_TOG  &none  &kp F6                         &home_row_hold_tap_right RIGHT_CONTROL F7  &home_row_hold_tap_right RIGHT_COMMAND F8  &home_row_hold_tap_right RIGHT_ALT F9  &kp F10                        &kp F12
-&trans   &none         &none                                &none                                    &none                                    &none         &bt BT_CLR           &none                   &none                          &none                                      &none                                      &none                                  &none                          &trans
-                                                            &trans                                   &none                                    &none                                                      &none                          &none                                      &trans
+&none    &bt BT_SEL 0  &bt BT_SEL 1                         &bt BT_SEL 2                             &bt BT_SEL 3                             &bt BT_SEL 4                       &none                   &rgb    &rgb                                       &rgb                                       &rgb                                   &rgb     &rgb_ug RGB_COLOR_HSB(0,0,100)
+&kp F11  &kp F1        &home_row_hold_tap_left LEFT_ALT F2  &home_row_hold_tap_left LEFT_COMMAND F3  &home_row_hold_tap_left LEFT_CONTROL F4  &kp F5                      &none  &rgb_ug RGB_TOG  &none  &kp F6  &home_row_hold_tap_right RIGHT_CONTROL F7  &home_row_hold_tap_right RIGHT_COMMAND F8  &home_row_hold_tap_right RIGHT_ALT F9  &kp F10  &kp F12
+&trans   &none         &none                                &none                                    &none                                    &none         &bt BT_CLR           &none                   &none   &none                                      &none                                      &none                                  &none    &trans
+                                                            &trans                                   &none                                    &none                                                      &none   &none                                      &trans
             >;
 
             label = "Ext";
