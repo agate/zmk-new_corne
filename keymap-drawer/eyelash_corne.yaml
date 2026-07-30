@@ -155,11 +155,11 @@ layers:
   - {h: '4', s: '$$mdi:bluetooth-connect$$'}
   - {h: '5', s: '$$mdi:bluetooth-connect$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&rgb'
-  - '&rgb'
-  - '&rgb'
-  - '&rgb'
-  - '&rgb'
+  - {t: RGB EFF, h: RGB EFR}
+  - {t: RGB BRI, h: RGB BRD}
+  - {t: RGB SPI, h: RGB SPD}
+  - {t: RGB SAI, h: RGB SAD}
+  - {t: RGB HUI, h: RGB HUD}
   - RGB COLOR HSB(0,0,100)
   - F11
   - F1
