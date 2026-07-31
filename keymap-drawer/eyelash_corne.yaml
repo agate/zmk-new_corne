@@ -154,12 +154,12 @@ layers:
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
   - {h: '4', s: '$$mdi:bluetooth-connect$$'}
   - {h: '5', s: '$$mdi:bluetooth-connect$$'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - RGB EFF
   - RGB BRI
-  - RGB SPI
-  - RGB SAI
+  - RGB EFF
   - RGB HUI
+  - RGB HUD
+  - RGB SAI
+  - RGB SAD
   - RGB COLOR HSB(0,0,100)
   - F11
   - F1
@@ -167,9 +167,9 @@ layers:
   - {t: F3, h: '$$mdi:apple-keyboard-command$$'}
   - {t: F4, h: '$$mdi:apple-keyboard-control$$'}
   - F5
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - RGB SPD
   - RGB TOG
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - RGB SPI
   - F6
   - {t: F7, h: '$$mdi:apple-keyboard-control$$'}
   - {t: F8, h: '$$mdi:apple-keyboard-command$$'}
@@ -183,7 +183,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:bluetooth-off$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - RGB BRD
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
