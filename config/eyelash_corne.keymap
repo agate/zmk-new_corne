@@ -179,6 +179,8 @@
 &kp LCTRL  &none   &none     &trans    &trans     &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
                              &kp LALT  &kp LGUI   &mo 1                                     &trans  &trans  &trans
             >;
+
+            label = "Game";
         };
     };
 };
